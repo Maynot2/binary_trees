@@ -1,8 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * Write a function that creates a binary tree node
- *
+ * binary_tree_node - creates a binary tree node
+ * @parent: parent node
+ * @value: value input
+ * Return: new_node
  */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
