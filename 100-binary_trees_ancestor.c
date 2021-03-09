@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 
-/*
+/**
  * is_child - Checks if a node is a child of another node
  * @parent: the parent node
  * @child: the tentative child node
@@ -18,13 +18,16 @@ int is_child(const binary_tree_t *parent, const binary_tree_t *child)
 	return (0);
 }
 
-/*
+/**
  * binary_trees_ancestor - finds the lowest common ancestor of two nodes
  * @first: first node
  * @second: second node
  * Return: pointer to the lowest common ancestor node
  */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(
+	const binary_tree_t *first,
+	const binary_tree_t *second
+)
 {
 	while (first)
 	{
