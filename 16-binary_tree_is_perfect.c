@@ -87,14 +87,9 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	printf("height: %lu\n", binary_tree_height(tree));
 
 	power_height = power(2, binary_tree_height(tree));
 	num_leaves = binary_tree_leaves(tree);
-
-	printf("power_height: %lu\n", power_height);
-	printf("num_leaves: %lu\n", num_leaves);
-
 
 	if (power_height == num_leaves)
 		return (1);
