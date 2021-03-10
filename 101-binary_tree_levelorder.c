@@ -22,6 +22,13 @@ int binary_tree_height2(const binary_tree_t *tree)
 		return (right_height + 1);
 }
 
+/**
+ * print_level - prints a binary tree level
+ * @root: root pointer
+ * @level: An int
+ * @func: The function used to prin
+ * Return: Nothing
+ */
 void print_level(const binary_tree_t *root, int level, void (*func)(int))
 {
 	if (root == NULL)
