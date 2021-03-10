@@ -14,10 +14,9 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 
 	parent = node->parent;
 
-	if (node->n > parent->left->n)
+	if (node == parent->right)
 		return (parent->left);
-	else
-		return (parent->right);
+	return (parent->right);
 }
 
 /**
