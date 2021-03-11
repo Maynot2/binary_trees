@@ -1,6 +1,14 @@
 #include "binary_trees.h"
 #include <limits.h>
 
+/**
+ * is_valid_bst - checks if binary tree is bst
+ * @tree: root pointer
+ * @max: The max int
+ * @min: The min int
+ * Return: 1 if true 0 otherwise
+ */
+
 int is_valid_bst(const binary_tree_t *tree, int max, int min)
 {
 	if (tree == NULL)
@@ -11,9 +19,10 @@ int is_valid_bst(const binary_tree_t *tree, int max, int min)
 			is_valid_bst(tree->right, max, tree->n));
 }
 /**
- * binary_tree_rotate_right - rotates a binary tree to the right
+ * binary_tree_is_bst - checks if binary tree is bst
  * @tree: root pointer
  * Return: The new root node
+ * Return: 1 if true 0 otherwise
  */
 
 int binary_tree_is_bst(const binary_tree_t *tree)
