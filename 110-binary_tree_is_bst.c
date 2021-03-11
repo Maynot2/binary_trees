@@ -21,7 +21,6 @@ int is_valid_bst(const binary_tree_t *tree, int max, int min)
 /**
  * binary_tree_is_bst - checks if binary tree is bst
  * @tree: root pointer
- * Return: The new root node
  * Return: 1 if true 0 otherwise
  */
 
