@@ -8,12 +8,12 @@
  * Return: 1 if complete, otherwise 0
  */
 
-int binary_tree_is_complete_rec(binary_tree_t *tree, int i, int size)
+int binary_tree_is_complete_rec(const binary_tree_t *tree, int i, int size)
 {
 	if (tree == NULL)
-		return (0);
+		return (1);
 
-	if (index >= number_nodes)
+	if (i >= size)
 		return (0);
 
 	return (binary_tree_is_complete_rec(tree->left, 2 * i + 1, size) &&
@@ -29,7 +29,7 @@ int  tree_size(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	return (binary_tree_size(tree->left) + 1 + binary_tree_size(tree->right));
+	return (tree_size(tree->left) + 1 + tree_size(tree->right));
 }
 
 /**
@@ -39,5 +39,7 @@ int  tree_size(const binary_tree_t *tree)
  */
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
+	if (tree == NULL)
+		return (0);
 	return (binary_tree_is_complete_rec(tree, 0, tree_size(tree)));
 }
