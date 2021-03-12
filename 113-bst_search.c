@@ -2,8 +2,8 @@
 
 /**
  * bst_search - searches for a value in a BST
- * @array: A pointer to an array of int
- * @size: The size of the array
+ * @tree: The rood node
+ * @value: The value of the node we are looking for
  * Return: First element in the array
  */
 
